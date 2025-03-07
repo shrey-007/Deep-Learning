@@ -29,3 +29,44 @@
 | **Computation**           | Less computationally intensive                    | Requires more computational resources       |
 
 Deep Learning is often considered the next step in ML for handling highly complex tasks, particularly where data is vast and unstructured.
+
+---
+
+Deep learning consists of several key components:
+
+1. **Neural Networks** – The backbone of deep learning, consisting of interconnected layers of neurons.
+   - **Input Layer** – Takes in data (e.g., images, text).
+   - **Hidden Layers** – Perform computations and extract features.
+   - **Output Layer** – Produces the final result (e.g., classification, regression).
+
+2. **Activation Functions** – Introduce non-linearity to the network. Common ones include:
+   - ReLU (Rectified Linear Unit)
+   - Sigmoid
+   - Tanh
+   - Softmax
+
+3. **Loss Function** – Measures how well the model's predictions match the expected results. Examples:
+   - Mean Squared Error (MSE) for regression
+   - Cross-Entropy for classification
+
+4. **Optimization Algorithm** – Adjusts weights to minimize the loss function. Common optimizers:
+   - Gradient Descent
+   - Adam (Adaptive Moment Estimation)
+   - RMSprop
+
+5. **Backpropagation** – The process of propagating errors backward through the network to update weights.
+
+6. **Training Data** – Large datasets required to train deep learning models. Examples:
+   - ImageNet (for images)
+   - COCO (for object detection)
+   - IMDb (for text sentiment analysis)
+
+7. **Batch Normalization & Regularization** – Techniques to improve training stability and prevent overfitting.
+   - Dropout
+   - L2 Regularization (Weight Decay)
+
+8. **Hardware & Frameworks** – Deep learning requires high computational power.
+   - **GPUs/TPUs** – Accelerate computations.
+   - **Frameworks** – TensorFlow, PyTorch, Keras.
+
+Would you like more details on any specific component?

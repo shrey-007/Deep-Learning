@@ -1,8 +1,6 @@
 ### **Digits Classification Using Deep Learning**
 Digit classification, such as recognizing handwritten digits (0-9), is a common deep learning task. The **MNIST dataset** (28×28 grayscale images of digits) is widely used for this.
 
----
-
 ## **Workflow for Digits Classification**
 
 ### **1. Data Collection & Preprocessing**
@@ -11,8 +9,6 @@ Digit classification, such as recognizing handwritten digits (0-9), is a common 
 - **Normalize Pixels** (scale values from [0,255] to [0,1] for better convergence).
 - **Reshape Data** (if needed, convert 2D images into 1D vectors for fully connected networks).
 - **One-Hot Encoding** (convert digit labels into categorical format, e.g., "3" → [0,0,0,1,0,0,0,0,0,0]).
-
----
 
 ### **2. Model Selection (Neural Network Architecture)**
 There are two main approaches:
@@ -27,7 +23,6 @@ There are two main approaches:
 - **Pooling Layers**: Reduce spatial dimensions to prevent overfitting.
 - **Fully Connected Layers**: Combine extracted features for final classification.
 
----
 
 ### **3. Training the Model**
 ✔ **Forward Propagation**:
@@ -42,7 +37,6 @@ There are two main approaches:
 - Compute error and adjust weights using **Gradient Descent / Adam Optimizer**.
 - Train for multiple epochs until accuracy stabilizes.
 
----
 
 ### **4. Model Evaluation**
 ✔ **Metrics Used**:
@@ -54,12 +48,10 @@ There are two main approaches:
 - **Data Augmentation** (rotate, shift, zoom digits).
 - **Dropout** (randomly deactivate neurons during training).
 
----
 
 ### **5. Deployment & Real-World Usage**
 ✔ Convert the trained model into a lightweight format (e.g., TensorFlow Lite, ONNX).  
 ✔ Deploy on mobile, web, or embedded systems (e.g., recognizing postal codes, bank check digits).
----
 
 ### **Summary**
 1️⃣ **Preprocess the data** (normalize, reshape, one-hot encode).  
@@ -68,4 +60,24 @@ There are two main approaches:
 4️⃣ **Evaluate with accuracy & confusion matrix** (fine-tune if needed).  
 5️⃣ **Deploy for real-world use** (mobile, web, embedded systems).
 
-Would you like a deeper explanation of CNN layers or another implementation in Java? 🚀
+---
+
+### **Number of Neurons in Input and Output Layers for Digit Classification**
+
+#### **1️⃣ Input Layer: 784 Neurons**
+- The MNIST dataset consists of **28×28 grayscale images**.
+- Each pixel is an input feature, so the input layer has:  
+  28 x 28 = 784 neurons
+- If using a **CNN**, the input is typically a **28×28×1** tensor (1 channel for grayscale).
+
+#### **2️⃣ Output Layer: 10 Neurons**
+- There are **10 possible digits (0-9)**, so the output layer needs **10 neurons**.
+- The **activation function** used in the output layer is **Softmax**, which outputs probabilities for each digit.
+
+### **Summary**
+| Layer  | Number of Neurons |
+|--------|------------------|
+| **Input Layer**  | **784** (for fully connected network) or (28×28×1 for CNN) |
+| **Output Layer** | **10** (one neuron per digit) |
+
+Would you like help in tuning the hidden layers? 🚀

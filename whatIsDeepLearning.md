@@ -69,4 +69,39 @@ Deep learning consists of several key components:
    - **GPUs/TPUs** – Accelerate computations.
    - **Frameworks** – TensorFlow, PyTorch, Keras.
 
-Would you like more details on any specific component?
+---
+
+### **Role of Neurons in Deep Learning**
+
+Neurons are the fundamental building blocks of a neural network, inspired by biological neurons in the human brain. Their role is to process and transmit information through the network.
+
+### **How a Neuron Works?**
+Each neuron in a neural network performs the following operations:
+
+#### **1. Receive Inputs (Features or Outputs from Previous Layer)**
+- Each neuron takes multiple inputs ![img.png](img.png) from the dataset or the previous layer.
+- Each input has an associated weight (w1,w2,w3...wn)
+
+#### **2. Compute Weighted Sum**
+- The neuron computes a weighted sum of its inputs:  
+![img_1.png](img_1.png)
+  where **\( b \) (bias)** is an additional parameter to adjust the activation.
+
+#### **3. Apply Activation Function**
+- The weighted sum \( z \) is passed through an **activation function** \( f(z) \) to introduce non-linearity.
+- ![img_2.png](img_2.png)
+
+#### **4. Transmit Output to Next Layer**
+- The activated value is passed to neurons in the next layer as input.
+
+### **Neurons in a Neural Network**
+
+1️⃣ **Input Layer Neurons** – Receive raw data and pass it to the next layer.  
+2️⃣ **Hidden Layer Neurons** – Extract patterns and features from data through multiple transformations.  
+3️⃣ **Output Layer Neurons** – Generate final predictions (classification labels, regression values, etc.).
+
+### **Why Are Neurons Important?**
+✔ **Learn Patterns & Features** – Each neuron captures different aspects of data.  
+✔ **Enable Deep Learning** – Stacking many neurons in deep layers helps model complex relationships.  
+✔ **Control Model Complexity** – The number of neurons and layers determines network depth and expressiveness.
+

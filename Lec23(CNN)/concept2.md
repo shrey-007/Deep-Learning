@@ -13,3 +13,30 @@
 - Similarly baaki 2 filters bhi apply karo and then unke bhi feature map banao
   ![img_6.png](img_6.png)
 - Ye abhi feature extraction hua.These extracted features ki loop kis position mai hai, straight line kis position mai hai are now fed to Neural Network.
+
+---
+CNNs are **invariant** to the following transformations:
+
+###  Translation Invariance
+✅ CNNs can recognize objects even if they are **shifted** in the image.  
+🔹 **Why?** The **Pooling layer** reduces spatial sensitivity, making CNNs robust to small translations.
+
+###  Deformation Invariance
+✅ CNNs can recognize distorted or deformed objects.  
+🔹 **Why?** **Pooling layers** and multiple filters detect flexible patterns.
+
+###  Illumination and Contrast Invariance
+✅ CNNs work well with changes in **lighting and contrast**.  
+🔹 **Why?** Deep layers extract high-level features (shapes, textures) independent of pixel intensity.
+
+### **🔍 What CNNs Are *Not* Invariant To?**
+
+###  Scale Invariance
+✅ CNNs can not recognize objects at different **scales** (sizes).  
+🔹 **Why?** Different filter sizes capture features at multiple scales.  
+🔹 **Limitation:** CNNs struggle with extreme scale variations unless techniques like **data augmentation** or **multi-scale training** are used.
+
+###  Rotation Invariance 
+✅ CNNs can handle small **rotations** but not large ones.  
+🔹 **Why?** Filters detect edges and patterns regardless of slight rotation.  
+🔹 **Limitation:** Large rotations require **rotation-augmented training data** or **Capsule Networks**.

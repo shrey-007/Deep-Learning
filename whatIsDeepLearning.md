@@ -139,3 +139,60 @@ The number of neurons in the **input** and **output** layers depends on the spec
 | Regression (e.g., house price) | Number of Features | 1                        | Linear |
 
 Would you like a formula or a method to determine the optimal number of hidden layer neurons? 🚀
+
+---
+
+### **How Gradient Descent, Loss Function (MSE), and Backpropagation Work Together**
+
+In deep learning, **Gradient Descent (GD)**, **Mean Squared Error (MSE) Loss**, and **Backpropagation** work together to train a neural network by updating weights to minimize error. Below is the **full process** explaining their interaction.
+
+## **📌 Step-by-Step Process**
+
+### **1️⃣ Forward Propagation (Compute Predictions)**
+- The input data **\( X \)** is passed through the network layer by layer.
+- Each neuron applies a **weighted sum** followed by an **activation function**:  
+  ![img_3.png](img_3.png)
+- The output layer produces predictions ![img_4.png](img_4.png).
+
+
+### **2️⃣ Compute Loss Using Mean Squared Error (MSE)**
+- The loss function **measures how far predictions are from actual values**.
+- **MSE Formula**:
+  ![img_5.png](img_5.png)
+  where:
+    - \( m \) = number of training samples
+    - \( Y_i \) = actual value
+    - \( hat{Y}_i \) = predicted value
+
+---
+
+### **3️⃣ Compute Gradients Using Backpropagation**
+Backpropagation calculates the derivative of the loss with respect to each weight **(∂Loss/∂W)** using the **chain rule**.
+
+1. **Derivative of MSE w.r.t. output predictions**:  
+   ![img_6.png](img_6.png)
+2. **Derivative w.r.t. last layer weights**:  
+   ![img_7.png](img_7.png)
+3. **Apply Chain Rule for Hidden Layers**:
+    - Compute gradients for each layer **from output to input**.
+    - Uses **partial derivatives** to adjust weights.
+
+### **4️⃣ Update Weights Using Gradient Descent**
+Once gradients are calculated, update weights using **Gradient Descent**:  
+![img_8.png](img_8.png)  
+where **\( eta \)** is the learning rate.
+
+👉 This process is repeated **for multiple epochs** until the loss reaches a minimum.
+
+
+## **🔁 Full Training Cycle**
+1️⃣ **Forward Pass** → Compute predictions.  
+2️⃣ **Compute Loss** → Compare predictions with actual values using MSE.  
+3️⃣ **Backward Pass (Backpropagation)** → Compute gradients using the chain rule.  
+4️⃣ **Gradient Descent Update** → Adjust weights to reduce loss.  
+5️⃣ **Repeat** for multiple epochs until convergence.
+
+Would you like an implementation in Java for this? 🚀
+
+---
+

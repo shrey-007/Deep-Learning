@@ -79,17 +79,17 @@ Neurons are the fundamental building blocks of a neural network, inspired by bio
 Each neuron in a neural network performs the following operations:
 
 #### **1. Receive Inputs (Features or Outputs from Previous Layer)**
-- Each neuron takes multiple inputs ![img.png](img.png) from the dataset or the previous layer.
+- Each neuron takes multiple inputs ![img.png](images/img.png) from the dataset or the previous layer.
 - Each input has an associated weight (w1,w2,w3...wn)
 
 #### **2. Compute Weighted Sum**
 - The neuron computes a weighted sum of its inputs:  
-![img_1.png](img_1.png)
+![img_1.png](images/img_1.png)
   where **\( b \) (bias)** is an additional parameter to adjust the activation.
 
 #### **3. Apply Activation Function**
 - The weighted sum \( z \) is passed through an **activation function** \( f(z) \) to introduce non-linearity.
-- ![img_2.png](img_2.png)
+- ![img_2.png](images/img_2.png)
 
 #### **4. Transmit Output to Next Layer**
 - The activated value is passed to neurons in the next layer as input.
@@ -151,14 +151,14 @@ In deep learning, **Gradient Descent (GD)**, **Mean Squared Error (MSE) Loss**, 
 ### **1️⃣ Forward Propagation (Compute Predictions)**
 - The input data **\( X \)** is passed through the network layer by layer.
 - Each neuron applies a **weighted sum** followed by an **activation function**:  
-  ![img_3.png](img_3.png)
-- The output layer produces predictions ![img_4.png](img_4.png).
+  ![img_3.png](images/img_3.png)
+- The output layer produces predictions ![img_4.png](images/img_4.png).
 
 
 ### **2️⃣ Compute Loss Using Mean Squared Error (MSE)**
 - The loss function **measures how far predictions are from actual values**.
 - **MSE Formula**:
-  ![img_5.png](img_5.png)
+  ![img_5.png](images/img_5.png)
   where:
     - \( m \) = number of training samples
     - \( Y_i \) = actual value
@@ -170,16 +170,16 @@ In deep learning, **Gradient Descent (GD)**, **Mean Squared Error (MSE) Loss**, 
 Backpropagation calculates the derivative of the loss with respect to each weight **(∂Loss/∂W)** using the **chain rule**.
 
 1. **Derivative of MSE w.r.t. output predictions**:  
-   ![img_6.png](img_6.png)
+   ![img_6.png](images/img_6.png)
 2. **Derivative w.r.t. last layer weights**:  
-   ![img_7.png](img_7.png)
+   ![img_7.png](images/img_7.png)
 3. **Apply Chain Rule for Hidden Layers**:
     - Compute gradients for each layer **from output to input**.
     - Uses **partial derivatives** to adjust weights.
 
 ### **4️⃣ Update Weights Using Gradient Descent**
 Once gradients are calculated, update weights using **Gradient Descent**:  
-![img_8.png](img_8.png)  
+![img_8.png](images/img_8.png)  
 where **\( eta \)** is the learning rate.
 
 👉 This process is repeated **for multiple epochs** until the loss reaches a minimum.

@@ -25,9 +25,7 @@ RNNs are widely used in:
 #### **Step 3: Forward Propagation**
 - The input **Xt** (at time step t) is passed to the network.
 - The hidden state **Ht** is updated using the previous hidden state and the current input:
-  \[
-  H_t = f(W_x X_t + W_h H_{t-1} + b)
-  \]
+  ![img.png](img.png)
   where **f** is an activation function (like tanh or ReLU).
 - The output **Yt** is computed from **Ht**.
 
@@ -46,4 +44,5 @@ RNNs are widely used in:
 - After training, the RNN is used for predictions on new data.
 - Performance is evaluated using accuracy, perplexity (for text), or MSE (for regression).
 
-Would you like an implementation in Java using **Deep Java Library (DJL)** or another framework? 🚀
+---
+Here in fall detection model, Xt is current image/frame from camera, H(t-1) is the previous state of the human(standing,laying), and we calculate current state(fall or no fall) of the human using Xt and H(t-1)

@@ -1,0 +1,2 @@
+- The most important thing is ki RNN, is made up of some layers let L, and those layers change timely.
+- The state of the neural layer at t is Ht
